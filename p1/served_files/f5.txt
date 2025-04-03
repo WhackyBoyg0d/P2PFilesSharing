@@ -1,0 +1,12 @@
+To run multiple peers to test the P2P application on one computer, the directory structure of this
+assignment should be structured as in Figure 1. Suppose the peer IDs for the peers are p1, p2, p3,
+p4, ... We have a directory for each peer named after its ID, which is called the peer directory. Each
+peer directory contains client.py (to be run as its client process), server.py (to be run as its server
+process), and one subdirectory “served_files”. “served_files” contains the files this peer is serving,
+i.e., the peer can upload chunks of the files in “served_files” upon client download requests.
+File “peer_settings.txt” provides the address information of the server in each plicly known port the
+peer’s server keeps listening on for incoming TCP connection requests. When all the peers are
+running on the same machine, you may use “localhost” (without quotes) for “ip_addr” for all peers,
+and specify different ports for different servers to listen on. We also assume that any client and
+server programs only have access to file “peer_settings.txt” and their own peer directory, and
+should not access any other peer directory.
